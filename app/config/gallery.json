@@ -41,13 +41,25 @@
           ]
         },
         {
-           "id": "nature-2",
-  "title": "Romantic Kerala Vacay",
-  "tag": "Customizable",
-  "duration": "5N/6D",
-  "route": "1N Cochin • 2N Munnar • 1N Thekkady • 1N Alleppey",
-  "description": "Exploring the magical world of mysterious forests12",
-  "coverImage": "/images/gallery/nature/nature_2.jpg", 
+          "id": "nature-2",
+          "title": "Romantic Kerala Vacay",
+          "description": "Exploring the magical world of mysterious forests",
+          "tag": "Customizable",
+          "duration": "5N/6D",
+          "route": "1N Cochin • 2N Munnar • 1N Thekkady • 1N Alleppey",
+          "inclusions": [
+            "Intercity Car Transfers",
+            "Airport Pickup & Drop",
+            "Selected Meals",
+            "3 Star Hotels",
+            "9 Activities"
+          ],
+          "freebies": [
+            "Photoshoot at Tea Estate",
+            "Honeymoon Hamper",
+            "Free Guided Spice Plantation Tour"
+          ],
+          "coverImage": "/images/gallery/nature/nature_2.jpg",
           "photoCount": 4,
           "createdAt": "2024-03-14",
           "photos": [
@@ -1664,8 +1676,8 @@
               "description": "Breathtaking view of Asian landscape"
             }
           ]
-        }
+        } 
       ]
     }
   }
-}
+} 

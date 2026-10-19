@@ -261,9 +261,54 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
                         {selectedAlbum?.title}
                       </h2>
                       {/* Album description */}
-                      <p className="text-gray-600 mb-6">
+                      <p className="text-gray-600 mb-4">
                         {selectedAlbum?.description}
                       </p>
+
+                      {/* Package info: tag + duration */}
+                      {(selectedAlbum?.tag || selectedAlbum?.duration) && (
+                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                          {selectedAlbum?.tag && (
+                            <span className="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800">
+                              {selectedAlbum.tag}
+                            </span>
+                          )}
+                          {selectedAlbum?.duration && (
+                            <span className="rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700">
+                              {selectedAlbum.duration}
+                            </span>
+                          )}
+                        </div>
+                      )}
+
+                      {/* Package route */}
+                      {selectedAlbum?.route && (
+                        <p className="text-gray-700 mb-6 leading-relaxed">
+                          {selectedAlbum.route}
+                        </p>
+                      )}
+
+                      {/* Package inclusions (bullets, two columns) */}
+                      {selectedAlbum?.inclusions && selectedAlbum.inclusions.length > 0 && (
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-4 list-disc list-inside text-gray-700">
+                          {selectedAlbum.inclusions.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {/* Package freebies (tick list) */}
+                      {selectedAlbum?.freebies && selectedAlbum.freebies.length > 0 && (
+                        <ul className="space-y-2 mb-6">
+                          {selectedAlbum.freebies.map((item, i) => (
+                            <li key={i} className="flex items-start gap-2 text-teal-700">
+                              <span aria-hidden="true">✓</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
                       {/* Album detail */}
                       {selectedAlbum?.detail && (
                         <p className="text-gray-600 mb-6">
@@ -277,14 +322,14 @@ export default function GalleryContent({ category, info }: GalleryContentProps) 
                         className="w-full py-2 px-4 bg-amber-100/80 text-gray-800 rounded-lg hover:bg-amber-100 transition-colors"
                         onClick={() => window.location.href = `/gallery/${category}/${selectedAlbum.id}`}
                       >
-                        View Gallery Details
+                        Request Price List  
                       </button>
                       
                       <button
                         className="w-full py-2 px-4 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                         onClick={handleNextGallery}
                       >
-                        Next Gallery
+                        Next Tour Package 
                       </button>
 
                       <button
