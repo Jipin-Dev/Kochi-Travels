@@ -13,7 +13,13 @@ export interface Album {
   coverImage: string
   photoCount: number
   createdAt: string
-  photos: Photo[]
+  photos: Photo[] 
+   // Tour package fields
+  tag?: string
+  duration?: string
+  route?: string
+  inclusions?: string[]
+  freebies?: string[]
 }
 
 
